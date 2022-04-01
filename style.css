@@ -3,30 +3,50 @@
     width: 100px;
     height: 100%;
     left: 0px;
-    
+    padding:10px;
     background: #F7F6FF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.nav :hover {
-    width: 206px;
+    padding:20px;
+    margin :0;
 
 }
-.logo{
-    padding:12px;
+.text{
+    display: none;
+}
+.nav:hover .text{
+    display:block;
+    float:top;
+}
+.nav:hover {
+    width: 206px;
+    display:inline;
+}
+.nav:hover div{
+    display: block;
 }
 .linija{
     height: 0px;
     border: 2px solid #C4C4C4;
 }
+/* 
+.logo{
+    width: 50%;
+}
 .home{
-    padding:25px;
+    width: 50%;
 }
 .calendar{
-    padding:10px;
+    width: 50%;
 }
 .fe{
-    padding:10px;
+    width: 50%;
 }
 .games{
-    padding:10px;
+    width: 50%;
+}
+.div{
+     
+}*/
+img{
+    width: 70%;
 }
