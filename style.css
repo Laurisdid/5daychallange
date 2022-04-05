@@ -1,55 +1,83 @@
 .nav {
-    position: absolute;
     width: 100px;
-    height: 100%;
-    left: 0px;
-    padding:10px;
-    background: #F7F6FF;
+    height: 100vh;
+    position: fixed;
+    transition: max-width 0.4s ease-in 0s;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding:20px;
-    margin :0;
-
 }
-.linija{
-    margin:10px
-}
-.text{
-    display: none;
-}
-.nav:hover .text{
-    display:block;
-    float:top;
-}
-.nav:hover {
+.nav .logo{
+    margin: 52px 0 24px;
+    position: relative;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    margin-left:20px;
+  }
+  .nav hr {
+    width: 62px;
+    max-width: 62px;
+    height: 2px;
+    background-color: gray;
+    margin: auto;
+    border: none;
+    margin-bottom: 32px;
+    transition: max-width 0.4s ease-in 0s;
+  }
+  .nav .icon-bg {
+    border-radius: 25px 0 0 25px;
+    margin-left: 11px;
+    padding: 0;
+    background-color: transparent;
+    margin: 34px 0 34px 11px;
+    display: flex;
+    align-items: center;
+  }
+  .nav .icon-bg:last-child .icon {
+    left: 30px;
+  }
+  .nav .icon-bg:last-child a {
+    margin-left: 49px;
+  }
+  .nav .icon-bg.active {
+    padding: 16px;
+    background-color: var(--white-color);
+  }
+  .nav .icon-bg.active .icon {
+    left: 26px;
+  }
+  .nav .icon-bg.active a {
+    color: var(--secondary-color);
+    margin-left: 42px;
+  }
+  .nav .icon-bg .icon {
+    position: relative;
+    left: 37px;
+  }
+  .nav .icon-bg a {
+    position: relative;
+    margin-left: 56px;
+    color: var(--grey-color);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    transition-delay: 0.2s;
+  }
+  .nav .icon-bg a:hover {
+    text-decoration: underline;
+  }
+  .nav:hover {
+    max-width: 206px;
     width: 206px;
-    display:inline;
-}
-.nav:hover div{
-    display: block;
-}
-.linija{
-    height: 0px;
-    border: 2px solid #C4C4C4;
-}
-/* 
-.logo{
-    width: 50%;
-}
-.home{
-    width: 50%;
-}
-.calendar{
-    width: 50%;
-}
-.fe{
-    width: 50%;
-}
-.games{
-    width: 50%;
-}
-.div{
-     
-}*/
-img{
-    width: 70%;
-}
+  }
+  .nav:hover hr {
+    width: 128px;
+    max-width: 128px;
+  }
+  .nav:hover a {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav:hover .logo{
+width: 350px;
+position:top;
+  }
