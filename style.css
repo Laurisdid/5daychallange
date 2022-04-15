@@ -1,83 +1,204 @@
 .nav {
-    width: 100px;
-    height: 100vh;
-    position: fixed;
-    transition: max-width 0.4s ease-in 0s;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 100vh;
+  position: fixed;
+  transition: max-width 0.4s ease-in 0s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.nav .logo{
-    margin: 52px 0 24px;
-    position: relative;
-    left: 50%;
-    width: 80%;
-    transform: translateX(-50%);
-    margin-left:20px;
+.nav .logo {
+  margin: 52px 0 24px;
+  position: relative;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  margin-left: 20px;
+}
+.nav hr {
+  width: 62px;
+  max-width: 62px;
+  height: 2px;
+  background-color: gray;
+  margin: auto;
+  border: none;
+  margin-bottom: 32px;
+  transition: max-width 0.4s ease-in 0s;
+}
+.nav .icon-bg {
+  border-radius: 25px 0 0 25px;
+  margin-left: 11px;
+  padding: 0;
+  background-color: transparent;
+  margin: 34px 0 34px 11px;
+  display: flex;
+  align-items: center;
+}
+.nav .icon-bg:last-child .icon {
+  left: 30px;
+}
+.nav .icon-bg:last-child a {
+  margin-left: 49px;
+}
+.nav .icon-bg.active {
+  padding: 16px;
+  background-color: var(--white-color);
+}
+.nav .icon-bg.active .icon {
+  left: 26px;
+}
+.nav .icon-bg.active a {
+  color: var(--secondary-color);
+  margin-left: 42px;
+}
+.nav .icon-bg .icon {
+  position: relative;
+  left: 37px;
+}
+.nav .icon-bg a {
+  position: relative;
+  margin-left: 56px;
+  color: var(--grey-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  transition-delay: 0.2s;
+}
+.nav .icon-bg a:hover {
+  text-decoration: underline;
+}
+.nav:hover {
+  max-width: 206px;
+  width: 206px;
+}
+.nav:hover hr {
+  width: 128px;
+  max-width: 128px;
+}
+.nav:hover a {
+  visibility: visible;
+  opacity: 1;
+}
+.nav:hover .logo {
+  width: 350px;
+  position: top;
+}
+
+.pasisveikinimas {
+  position: absolute;
+  width: 341px;
+  height: 80px;
+  left: 206px;
+  top: 89px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+}
+.centrinisblokas {
+  background: #E5E5E5;
+  width: 100%;
+  height: 100vh;
+}
+.laikas {
+  position: absolute;
+  width: 516px;
+  height: 147px;
+  left: 857px;
+  top: 56px;
+
+  background: #ffffff;
+  border-radius: 25px;
+}
+.laikospalva {
+  color: #02577a;
+}
+.cena{
+  margin:top 30px;
+}
+.paveiksliukas {
+  position: absolute;
+  width: 100vh;
+  height: 432px;
+  left: 97px;
+  top: 226px;
+
+  background: linear-gradient(
+      0deg,
+      rgba(237, 236, 243, 0.4),
+      rgba(237, 236, 243, 0.4)
+    ),
+    url(pexels-fauxels-3184454.jpg);
+}
+.apatinistekstas {
+  position: absolute;
+  width: 528.89px;
+  height: 23px;
+  left: 456px;
+  top: 756px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #000000;
+}
+@media (max-width: 680px) {
+  .pasisveikinimas {
+    position: absolute;
+    width: 285px;
+    height: 80px;
+    left: 141px;
+    top: 224px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 35px;
+
+    color: #000000;
   }
-  .nav hr {
-    width: 62px;
-    max-width: 62px;
-    height: 2px;
-    background-color: gray;
-    margin: auto;
-    border: none;
-    margin-bottom: 32px;
-    transition: max-width 0.4s ease-in 0s;
+  .laikas {
+    position: absolute;
+    width: 379px;
+    height: 103px;
+    left: 145px;
+    top: 66px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
   }
-  .nav .icon-bg {
-    border-radius: 25px 0 0 25px;
-    margin-left: 11px;
-    padding: 0;
-    background-color: transparent;
-    margin: 34px 0 34px 11px;
-    display: flex;
-    align-items: center;
+  .laikospalva {
+    color: #02577a;
   }
-  .nav .icon-bg:last-child .icon {
-    left: 30px;
+  .paveiksliukas {
+    position: absolute;
+    width: 476px;
+    height: 283px;
+    left: 100px;
+    top: 317px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(237, 236, 243, 0.4),
+        rgba(237, 236, 243, 0.4)
+      ),
+      url(pexels-fauxels-3184454.jpg);
   }
-  .nav .icon-bg:last-child a {
-    margin-left: 49px;
+  .apatinistekstas {
+    position: absolute;
+    width: 433px;
+    height: 121px;
+    left: 125px;
+
+    border: 2px solid #02577a;
+    box-sizing: border-box;
+    border-radius: 25px;
   }
-  .nav .icon-bg.active {
-    padding: 16px;
-    background-color: var(--white-color);
-  }
-  .nav .icon-bg.active .icon {
-    left: 26px;
-  }
-  .nav .icon-bg.active a {
-    color: var(--secondary-color);
-    margin-left: 42px;
-  }
-  .nav .icon-bg .icon {
-    position: relative;
-    left: 37px;
-  }
-  .nav .icon-bg a {
-    position: relative;
-    margin-left: 56px;
-    color: var(--grey-color);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-    transition-delay: 0.2s;
-  }
-  .nav .icon-bg a:hover {
-    text-decoration: underline;
-  }
-  .nav:hover {
-    max-width: 206px;
-    width: 206px;
-  }
-  .nav:hover hr {
-    width: 128px;
-    max-width: 128px;
-  }
-  .nav:hover a {
-    visibility: visible;
-    opacity: 1;
-  }
-  .nav:hover .logo{
-width: 350px;
-position:top;
-  }
+}
